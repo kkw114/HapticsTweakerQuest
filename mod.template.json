@@ -1,0 +1,19 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Lauriethefish/QuestPatcher.QMod/refs/heads/main/QuestPatcher.QMod/Resources/qmod.schema.json",
+  "_QPVersion": "1.1.0",
+  "name": "${mod_name}",
+  "id": "${mod_id}",
+  "modloader": "Scotland2",
+  "author": "BlqzingIce",
+  "porter": "DSH 汉化移植",
+  "version": "${version}",
+  "description": "高度可配置的手柄触觉反馈（汉化版）！可自定义普通音符、链音符、坏切、炸弹、弧线、光剑碰撞与墙体碰撞的振动时长与强度。",
+  "dependencies": [],
+  "modFiles": [
+    "${binary}"
+  ],
+  "lateModFiles": [],
+  "libraryFiles": [],
+  "fileCopies": [],
+  "copyExtensions": []
+}

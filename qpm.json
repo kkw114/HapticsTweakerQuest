@@ -1,0 +1,81 @@
+{
+  "version": "0.4.0",
+  "sharedDir": "shared",
+  "dependenciesDir": "extern",
+  "info": {
+    "name": "Haptics Tweaker",
+    "id": "HapticsTweaker",
+    "version": "1.1.0",
+    "url": "https://github.com/BlqzingIce/HapticsTweaker",
+    "additionalData": {
+      "overrideSoName": "libhapticstweaker.so",
+      "cmake": true
+    }
+  },
+  "workspace": {
+    "scripts": {
+      "build": [
+        "pwsh ./scripts/build.ps1"
+      ],
+      "clean": [
+        "pwsh ./scripts/build.ps1 -clean"
+      ],
+      "copy": [
+        "pwsh ./scripts/copy.ps1 $0:?"
+      ],
+      "qmod": [
+        "qpm s build",
+        "qpm s update-version",
+        "qpm qmod zip --skip_build",
+        "qpm s update-version -- -restore"
+      ]
+    },
+    "ndk": "^27.2.12479018",
+    "qmodIncludeDirs": [
+      "./build",
+      "./extern/libs"
+    ],
+    "qmodIncludeFiles": [],
+    "qmodOutput": "./HapticsTweaker.qmod"
+  },
+  "dependencies": [
+    {
+      "id": "beatsaber-hook",
+      "versionRange": "^6.4.2",
+      "additionalData": {}
+    },
+    {
+      "id": "bs-cordl",
+      "versionRange": "4008.*",
+      "additionalData": {}
+    },
+    {
+      "id": "bsml",
+      "versionRange": "^0.4.55",
+      "additionalData": {}
+    },
+    {
+      "id": "config-utils",
+      "versionRange": "^2.0.3",
+      "additionalData": {}
+    },
+    {
+      "id": "custom-types",
+      "versionRange": "^0.18.3",
+      "additionalData": {}
+    },
+    {
+      "id": "paper2_scotland2",
+      "versionRange": "^4.6.4",
+      "additionalData": {}
+    },
+    {
+      "id": "scotland2",
+      "versionRange": "^0.1.6",
+      "additionalData": {
+        "includeQmod": false,
+        "private": true
+      }
+    }
+  ]
+}

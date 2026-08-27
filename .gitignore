@@ -1,0 +1,6 @@
+build/
+extern/
+debug/
+*.so
+version.txt
+include/git-info.h
